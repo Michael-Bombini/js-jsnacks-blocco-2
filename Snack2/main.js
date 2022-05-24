@@ -10,17 +10,19 @@ const cognomi = ["Rossi", "Verdi", "Gialli", "Conte", "Bianchi", "Gallo", "Verde
 const generato = [];
 
 const quantiGenerare = parseInt(prompt(`Il grande Gatsby ti chiede quanti Nomi e cognomi vuoi generare?`))
-console.log(quantiGenerare);
+
+
 const lista = document.getElementById("lista");
 const maxNomi = nomi.length - 1;
 const maxCognomi = cognomi.length - 1;
-
+if(isNaN(quantiGenerare) || quantiGenerare<=0){
+    lista.innerHTML = "Questo non è un numero o è minore/uguale a 0!";
+}
 for (let i = 0; i < quantiGenerare; i++) {
     let indiceNome = Math.floor(Math.random() * maxNomi);
     let indiceCognome = Math.floor(Math.random() * maxCognomi)
     generato.push(nomi[indiceNome] + " " + cognomi[indiceCognome]);
     lista.innerHTML += `<li>${generato[i]}</li>`
-    console.log(generato);
 
 }
 
