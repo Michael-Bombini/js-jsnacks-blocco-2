@@ -35,17 +35,23 @@ for(let i = 0 ; i < quantiArrayDue ; i++){
 
 //se il primo array è più corto del secondo
 if(arrayUno.length<arrayDue.length){
-    while(arrayUno.length!=arrayDue.length)
+    while(arrayUno.length!=arrayDue.length){
         arrayUno.push("aggiunto");
+    }
 }
 
 
 //se il secondo array è più corto del primo
-if(arrayDue.length<arrayUno.length){
-while(arrayDue.length!=arrayUno.length)
+else if(arrayDue.length<arrayUno.length){
+while(arrayDue.length!=arrayUno.length){
         arrayDue.push("agginto");
-
 }
+}
+
+else{
+    console.log("Gli array sono di uguale dimensione");
+}
+
 
 
 console.log(arrayUno);
